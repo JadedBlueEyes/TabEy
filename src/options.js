@@ -34,7 +34,7 @@ const saveOptions = e => {
 const restoreOptions = _ => {
   browser.storage.sync.get(fields)
     .then(options => {
-      console.log(options)
+      console.log(options);
       fields.forEach((n) => {
         let el = document.getElementById(n);
         let type = el.getAttribute('type');

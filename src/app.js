@@ -2,7 +2,6 @@ const moment = require('moment');
 let cfg = false;
 let clock = document.getElementById('clock');
 let sub = document.getElementById('clock-sub');
-var configureTimeout;
 
 function configure () {
   shouldConfigure = false;
@@ -50,7 +49,7 @@ function updateSub () {
   sub.textContent = moment().format(cfg.subFmt);
 }
 browser.storage.sync.get(['tabTitle', 'clockFmt', 'clockEnabled', 'subFmt', 'subEnabled', 'invertColours',
-   'scale'
+  'scale'
 ]).then((cfgResponse) => {
   cfg = cfgResponse;
   if (docReady) { configure(); } else { shouldConfigure = true; }
