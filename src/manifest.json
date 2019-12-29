@@ -8,10 +8,10 @@
     "url": "https://github.com/JoelEllis/TabEy"
   },
   "icons": {
-    "48": "img/icon.svg",
-    "96": "img/icon.svg",
-    "128": "img/icon.svg",
-    "512": "img/icon.svg"
+    "48": "icon.svg",
+    "96": "icon.svg",
+    "128": "icon.svg",
+    "512": "icon.svg"
   },
   "applications": {
     "gecko": {
