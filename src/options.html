@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabEy | Options</title>
+  <script defer src="options.js"></script>
+  <link rel="stylesheet" href="chrome://global/skin/global.css">
+  <link rel="stylesheet" href="chrome://global/skin/in-content/common.css">
+</head>
+
+<body>
+  <form>
+    <p>
+      <label for="tabTitle">Tab Title</label>
+      <input type="text" id="tabTitle">
+    </p>
+    <p>
+      <label for="clockEnabled">Clock Enabled?</label>
+      <input type="checkbox" id="clockEnabled">
+    </p>
+    <p>
+      <label for="clockFmt">Clock format</label>
+      <input type="text" id="clockFmt">
+      <p>Preview</p>
+      <p id="clockFmt-prev"></p>
+    </p>
+    <p>
+      <label for="clockEnabled">Sub Enabled?</label>
+      <input type="checkbox" id="subEnabled">
+    </p>
+    <p>
+      <label for="clockFmt">Sub format</label>
+      <input type="text" id="subFmt">
+      <p>Preview</p>
+      <p id="clockFmt-prev"></p>
+    </p>
+    <p>
+      <label for="invertColours">Invert Colours?</label>
+      <input type="checkbox" id="invertColours">
+    </p>
+    <p>
+      <label for="scale">Scale?</label>
+      <input type="number" id="scale">
+    </p>
+    <button type="submit">Save</button>
+  </form>
+</body>
+
+</html>

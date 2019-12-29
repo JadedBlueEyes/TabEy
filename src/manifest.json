@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Tabey",
+  "version": "1.0.0",
+  "description": "A new tab page you'll enjoy.",
+  "developer": {
+    "name": "JoelEllis",
+    "url": "https://github.com/JoelEllis/TabEy"
+  },
+  "icons": {
+    "48": "img/icon-48.png",
+    "96": "img/icon-96.png"
+  },
+  "applications": {
+    "gecko": {
+      "id": "tabey2joel@ellis.link",
+      "strict_min_version": "57.0"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true,
+    "chrome_style": true
+  },
+  "permissions": [
+    "storage"
+  ],
+  "chrome_url_overrides" : {
+    "newtab": "app.html"
+  }
+}

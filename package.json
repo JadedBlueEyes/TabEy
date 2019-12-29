@@ -1,19 +1,35 @@
 {
   "name": "tabey",
   "version": "1.0.0",
-  "description": "",
+  "description": "A new tab page you'll enjoy.",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cp src/manifest.json dist/manifest.json&parcel src/*.html",
+    "build": "parcel build src/*.html&&cp src/manifest.json dist/manifest.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoelEllis/TabEy.git"
   },
-  "author": "",
+  "author": "Joel Ellis <joel@ellis.link>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JoelEllis/TabEy/issues"
   },
-  "homepage": "https://github.com/JoelEllis/TabEy#readme"
+  "homepage": "https://github.com/JoelEllis/TabEy#readme",
+  "devDependencies": {
+    "@csstools/postcss-sass": "^4.0.0",
+    "autoprefixer": "^9.7.3",
+    "parcel-bundler": "^1.12.4",
+    "postcss-csso": "^4.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-scss": "^2.0.0",
+    "sass": "^1.24.0"
+  },
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "moment": "^2.24.0",
+    "sortablejs": "^1.10.2"
+  },
+  "browserslist": "last 2 years, >2%"
 }
