@@ -4,8 +4,8 @@
   "description": "A new tab page you'll enjoy.",
   "main": "",
   "scripts": {
-    "dev": "cp src/manifest.json dist/manifest.json&parcel src/*.html",
-    "build": "parcel build src/*.html&&cp src/manifest.json dist/manifest.json"
+    "dev": "cp src/manifest.json dist/manifest.json&cp -r icon/* dist&parcel src/*.html",
+    "build": "parcel build src/*.html&&cp src/manifest.json dist/manifest.json&cp -r icon/* dist"
   },
   "repository": {
     "type": "git",
