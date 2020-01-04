@@ -10,7 +10,7 @@ const defaultOpts = {
   tabTitle: 'New Tab',
   clockFmt: 'LTS',
   clockEnabled: 'on',
-  subFmt: 'dddd[,] Mo MMMM',
+  subFmt: 'dddd[,] Do MMMM',
   subEnabled: 'on',
   invertColours: '',
   scale: '1.0'
