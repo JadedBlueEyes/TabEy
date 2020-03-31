@@ -22,7 +22,9 @@ Output will be in `dist` directory.
 ### Prod build
 
 ```bash
-parcel build src/*.html&&cp src/manifest.json dist/manifest.json&cp -r icon/* dist
+parcel build src/*.html
+cp src/manifest.json dist/manifest.json
+cp -r icon/* dist
 ```
 
 Output will be in `dist` directory.
