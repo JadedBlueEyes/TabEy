@@ -1,9 +1,10 @@
 // import Sortable from 'sortablejs';
 
 // const moment = require('moment');
+const moment = require('moment-timezone');
 console.log('loaded');
 
-const fields = ['tabTitle', 'clockFmt', 'clockEnabled', 'subFmt', 'subEnabled', 'invertColours', 'scale'
+const fields = ['tabTitle', 'clockFmt', 'clockEnabled', 'subFmt', 'subEnabled', 'invertColours', 'scale', 'timezone'
 ];
 
 const defaultOpts = {
@@ -13,7 +14,8 @@ const defaultOpts = {
   subFmt: 'dddd[,] Do MMMM',
   subEnabled: 'on',
   invertColours: '',
-  scale: '1.0'
+  scale: '1.0',
+  timezone: moment.tz.guess()
 };
 const colourPalette = [
   'ff8c00', 'e81123', 'd13438', 'c30052', 'bf0077', '9a0089', '881798', '744da9',

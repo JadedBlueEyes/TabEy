@@ -1,12 +1,15 @@
-const moment = require('moment');
+const moment = require('moment-timezone');
+
 let cfg = false;
 let clock = document.getElementById('clock');
 let sub = document.getElementById('clock-sub');
 
 function configure () {
   shouldConfigure = false;
-  console.log(cfg);
   cfg.scale = cfg.scale || '1';
+  console.log(cfg.timezone)
+  cfg.timezone = cfg.timezone || moment.tz.guess()
+  console.log(cfg.timezone)
   document.title = cfg.tabTitle;
   if (cfg.invertColours) {
     document.body.classList.add('invert');
@@ -14,12 +17,12 @@ function configure () {
   if (cfg.clockEnabled) {
     clock.style.display = 'block';
     updateClock();
-    setInterval(updateClock, 500);
+    setInterval(updateClock, 100);
   }
   if (cfg.subEnabled) {
     sub.style.display = 'block';
     updateSub();
-    setInterval(updateSub, 500);
+    setInterval(updateSub, 100);
   }
   updScale();
 }
@@ -43,14 +46,15 @@ function updScale () {
   // }
 }
 function updateClock () {
-  clock.textContent = moment().format(cfg.clockFmt);
+  clock.textContent = moment.tz(cfg.timezone).format(cfg.clockFmt);
 }
 function updateSub () {
-  sub.textContent = moment().format(cfg.subFmt);
+  sub.textContent = moment.tz(cfg.timezone).format(cfg.subFmt);
 }
 browser.storage.sync.get(['tabTitle', 'clockFmt', 'clockEnabled', 'subFmt', 'subEnabled', 'invertColours',
-  'scale'
+  'scale', 'timezone'
 ]).then((cfgResponse) => {
+  console.log(cfgResponse)
   cfg = cfgResponse;
   if (docReady) { configure(); } else { shouldConfigure = true; }
 });
